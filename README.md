@@ -112,7 +112,7 @@ python scale_images.py
 - Build docker image.
 ```
 cd docker
-./make_image.sh nvdiffrec:v1
+bash ./make_image.sh nvdiffrec:v1
 ```
 
 - Start an interactive docker container:
