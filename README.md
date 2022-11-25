@@ -33,7 +33,7 @@ Below is an example with Cuda 11.6
 # Make sure you are using the Docker workflow:
 cd docker
 bash ./make_image.sh nvdiffrec:v1
-docker run --gpus device=0 -it --rm -v /raid:/raid -it nvdiffrec:v1 bash  # interactive run
+docker run --gpus device=0 -it --rm -v /raid:/raid -it nvdiffrec:v1 bash  # interactive run 1-gpu
 
 # In docker
 conda create -y -n dmodel python=3.9
@@ -44,6 +44,11 @@ pip install ninja imageio PyOpenGL glfw xatlas gdown
 pip install git+https://github.com/NVlabs/nvdiffrast/
 pip install --global-option="--no-networks" git+https://github.com/NVlabs/tiny-cuda-nn#subdirectory=bindings/torch
 imageio_download_bin freeimage
+
+# Commit the docker image
+# On GPU host
+docker ps  # find container ID
+docker commit <container_id> nvdiffrec:v1_yf225
 ```
 
 ### Every new command prompt
