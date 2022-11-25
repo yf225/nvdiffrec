@@ -32,7 +32,7 @@ Below is an example with Cuda 11.6
 ```
 conda create -n dmodel python=3.9
 conda activate dmodel
-conda install pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia
+conda install -y pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia
 pip install ninja imageio PyOpenGL glfw xatlas gdown
 pip install git+https://github.com/NVlabs/nvdiffrast/
 pip install --global-option="--no-networks" git+https://github.com/NVlabs/tiny-cuda-nn#subdirectory=bindings/torch
