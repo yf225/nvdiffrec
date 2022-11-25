@@ -31,6 +31,8 @@ Below is an example with Cuda 11.6
 
 ```
 conda create -y -n dmodel python=3.9
+# In docker
+. /opt/conda/etc/profile.d/conda.sh
 conda activate dmodel
 conda install -y pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia
 pip install ninja imageio PyOpenGL glfw xatlas gdown
