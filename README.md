@@ -30,8 +30,13 @@ Pick the appropriate version of PyTorch compatible with the installed Cuda toolk
 Below is an example with Cuda 11.6
 
 ```
-conda create -y -n dmodel python=3.9
+# Make sure you are using the Docker workflow:
+cd docker
+bash ./make_image.sh nvdiffrec:v1
+docker run --gpus device=0 -it --rm -v /raid:/raid -it nvdiffrec:v1 bash  # interactive run
+
 # In docker
+conda create -y -n dmodel python=3.9
 . /opt/conda/etc/profile.d/conda.sh
 conda activate dmodel
 conda install -y pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia
