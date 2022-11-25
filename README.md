@@ -30,7 +30,7 @@ Pick the appropriate version of PyTorch compatible with the installed Cuda toolk
 Below is an example with Cuda 11.6
 
 ```
-conda create -n dmodel python=3.9
+conda create -y -n dmodel python=3.9
 conda activate dmodel
 conda install -y pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia
 pip install ninja imageio PyOpenGL glfw xatlas gdown
