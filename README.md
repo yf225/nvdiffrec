@@ -31,7 +31,7 @@ Below is an example with Cuda 11.6
 
 ```
 conda create -n dmodel python=3.9
-activate dmodel
+conda activate dmodel
 conda install pytorch torchvision torchaudio cudatoolkit=11.6 -c pytorch -c conda-forge
 pip install ninja imageio PyOpenGL glfw xatlas gdown
 pip install git+https://github.com/NVlabs/nvdiffrast/
@@ -40,7 +40,7 @@ imageio_download_bin freeimage
 ```
 
 ### Every new command prompt
-`activate dmodel`
+`conda activate dmodel`
 
 # Examples
 
@@ -86,7 +86,7 @@ are courtesy of their respective authors. Please note
 that individual licenses apply to each dataset. To automatically download and pre-process all datasets, run the 
 `download_datasets.py` script:
 ```
-activate dmodel
+conda activate dmodel
 cd data
 python download_datasets.py
 ```
@@ -100,7 +100,7 @@ and unzip it into the `nvdiffrec/data` folder. This is required for running any 
 (manually annotated) segmentation masks. Clone the NeRD datasets using git and rescale them to 512 x 512 pixels resolution using the script
 `scale_images.py`. This is required for running any of the `nerd_*.json` configs.
 ```
-activate dmodel
+conda activate dmodel
 cd nvdiffrec/data/nerd
 git clone https://github.com/vork/ethiopianHead.git
 git clone https://github.com/vork/moldGoldCape.git
